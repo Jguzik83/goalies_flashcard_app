@@ -1,0 +1,10 @@
+<h1>Play</h1>
+
+<ul>
+  <% @decks.each do |cur_deck| %>
+    <li><a href="/games"><%= cur_deck.name %> </a>
+    <%= erb :'games/_play', locals: {deck: cur_deck} %>
+    </li>
+
+  <% end %>
+</ul>
