@@ -26,3 +26,10 @@ post '/cards' do
     redirect "/decks/#{card.deck_id}/cards/new"
   end
 end
+
+delete '/cards/:id' do
+  card = Card.find_by(id: params[:id])
+  deck_id = card.deck_id
+  card.destroy
+  redirect "/decks/#{deck_id}/edit"
+end

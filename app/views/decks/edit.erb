@@ -3,14 +3,14 @@
 <a href="/decks/<%= @deck_id %>/cards/new">Add New Card</a>
 
 <ul>
-  <%@cards.each_with_index do |card, index|%>
+  <%@cards.each_with_index do |cur_card, index|%>
     <li>
       card: <%= index + 1 %>
-      <a href="/cards/<%= card.id %>">edit</a>
+      <a href="/cards/<%= cur_card.id %>">edit</a>
+      <%= erb :'cards/_delete', locals: {card: cur_card} %>
 
-      <br>
-      question: <%= card.question %> <br>
-      answer: <%= card.answer %> <br>
+      question: <%= cur_card.question %> <br>
+      answer: <%= cur_card.answer %> <br>
     </li>
   <%end%>
 </ul>
