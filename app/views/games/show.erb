@@ -1,6 +1,6 @@
 <h3> Playing Game </h3>
 
-<h2> <%= @card.question %> </h2>
+<p> <%= @card.question %> </p>
 
 <form action="/games/<%= @game_id %>/guesses" method="post">
   <input type="hidden" name="game_id" value="<%= @game_id %>">
