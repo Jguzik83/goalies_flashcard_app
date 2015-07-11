@@ -1,4 +1,16 @@
-<h1>Edit Now</h1>
-<ul><%@cards.each do |card|%>
-<li><%= card.question %><p>edit</p></li>
-<%end%></ul>
+<h1>Edit Deck's Cards</h1>
+
+<a href="/decks/<%= @deck_id %>/cards/new">Add New Card</a>
+
+<ul>
+  <%@cards.each_with_index do |card, index|%>
+    <li>
+      card: <%= index + 1 %>
+      <a href="/cards/<%= card.id %>">edit</a>
+
+      <br>
+      question: <%= card.question %> <br>
+      answer: <%= card.answer %> <br>
+    </li>
+  <%end%>
+</ul>

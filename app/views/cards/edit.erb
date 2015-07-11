@@ -1,0 +1,9 @@
+<h1>Edit Card</h1>
+
+
+<form action="/cards/<%= @card.id %>" method="post">
+  <input type='hidden' name='_method' value='put' >
+  <input type="text" name="card[question]" value="<%= @card.question %>">
+  <input type="text" name="card[answer]" value="<%= @card.answer %>">
+  <input type="submit" value="save changes">
+</form>

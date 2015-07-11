@@ -10,7 +10,8 @@ end
 
 get '/decks/:id/edit' do
   deck = Deck.find_by(id: params[:id])
-  @cards = deck.cards
+  @deck_id = params[:id]
+  @cards = deck.cards.order(:id)
   erb :'decks/edit'
 end
 
@@ -20,8 +21,13 @@ post '/decks' do
   redirect "/users/#{session[:user_id]}"
 end
 
-delete '/decks/:id/delete' do
+delete '/decks/:id' do
   deck = Deck.find_by(id: params[:id])
   deck.destroy
   redirect "/users/#{session[:user_id]}"
+end
+
+get '/decks/:deck_id/cards/new' do
+  @deck = Deck.find_by(id: params[:deck_id])
+  erb :'cards/new'
 end

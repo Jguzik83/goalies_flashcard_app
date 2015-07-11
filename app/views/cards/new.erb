@@ -1,0 +1,10 @@
+<h1>Add new card to <%= @deck.name%></h1>
+
+<form action="/cards" method="post">
+  <input type="hidden" name="card[deck_id]" value="<%= @deck.id %>">
+  Question: <br>
+  <input type="text" name="card[question]" placeholder="question"> <br>
+  Answer: <br>
+  <input type="text" name="card[answer]" placeholder="answer"> <br>
+  <input type="submit" value="save card">
+</form>
