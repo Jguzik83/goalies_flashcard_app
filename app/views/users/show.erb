@@ -2,7 +2,7 @@
 <div class ="card">
 <a href= '/games'>| P L A Y |</a> <br><br>
 
-<a>| Y O U R   D E C K S |</a><br><br>
+| Y O U R   D E C K S |<br><br>
 <% @decks.each do |deck| %>
   <a href= '/decks/<%=deck.id%>'><%= deck.name %></a>
   <a href= '/decks/<%=deck.id%>/edit'>Edit</a>
@@ -13,5 +13,4 @@
 
 <br>
 <a href= '/decks/new'>| N E W   D E C K |</a>
-
 </div>
