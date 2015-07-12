@@ -22,7 +22,6 @@
   <title></title>
 </head>
 <body>
-<div id="content">
   <header>
     <div id="login-toolbar">
       <% if current_user %>
@@ -32,8 +31,11 @@
         <a href="/login">Login</a>
         <a href='/signup'>Signup</a>
       <% end %>
+    </div>
   </header>
+<div class="justcenter">
   <%= yield %>
+</div>
 </div>
 </body>
 </html>
