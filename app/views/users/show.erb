@@ -1,14 +1,16 @@
-<h1>You're here and authorized, show.erb</h1>
+<h1>Welcome, <%= @user.username%> </h1>
 
-<a href= '/games'>play a game!</a> <br>
+<a href= '/games'>| P L A Y |</a> <br><br>
 
+<a>| Y O U R   D E C K S |</a><br><br>
 <% @decks.each do |deck| %>
   <a href= '/decks/<%=deck.id%>'><%= deck.name %></a>
   <a href= '/decks/<%=deck.id%>/edit'>Edit</a>
 
-  <%= erb :'decks/_delete', locals: {deck: deck} %>
+  <%= erb :'decks/_delete', locals: {deck: deck} %><br>
 
 <%end%>
 
 <br>
-<a href= '/decks/new'>Add New Deck</a>
+<a href= '/decks/new'>| N E W   D E C K |</a>
+

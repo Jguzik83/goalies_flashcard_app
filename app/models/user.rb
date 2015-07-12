@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   has_many :decks, foreign_key: 'creator_id'
   has_many :guesses, through: :games
 
+  validates :username, presence: true, uniqueness: true
+
   include BCrypt
 
   def password

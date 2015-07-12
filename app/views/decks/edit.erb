@@ -1,16 +1,17 @@
 <h1>Edit Deck's Cards</h1>
-
+<body>
 <a href="/decks/<%= @deck_id %>/cards/new">Add New Card</a>
 
-<ul>
+<p>
   <%@cards.each_with_index do |cur_card, index|%>
-    <li>
-      card: <%= index + 1 %>
-      <a href="/cards/<%= cur_card.id %>">edit</a>
-      <%= erb :'cards/_delete', locals: {card: cur_card} %>
-
-      question: <%= cur_card.question %> <br>
-      answer: <%= cur_card.answer %> <br>
-    </li>
+    <p>
+      CARD | <%= index + 1 %>
+      <a href="/cards/<%= cur_card.id %>"> EDIT</a>
+      <br>
+      Q |  <%= cur_card.question %> <br>
+      A |  <%= cur_card.answer %> <br>
+       <%= erb :'cards/_delete', locals: {card: cur_card} %>
+    </p>
   <%end%>
-</ul>
+</p>
+</body>
