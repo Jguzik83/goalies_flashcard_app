@@ -9,7 +9,7 @@ body {font-family: 'Wire One', sans-serif;
       line-height: 160%;
       background-color: #000000;}
 
-h1, h2, h3, h4, h5, h6 {font-family: 'Megrim', cursive; line-height:100%; margin-top: 0.5em; margin-bottom: 0.5em; color: #FFFFFF; font-weight: 400;}
+h1, h2, h3, h4, h5, h6 {font-family: 'Oswald', line-height:100%; margin-top: 0.5em; margin-bottom: 0.5em; color: #FFFFFF; font-weight: 300;}
 h1 {font-size: 1.8em;}
 h2 {font-size: 1.6em;}
 h3 {font-size: 1.4em;}
@@ -38,6 +38,15 @@ del {text-decoration: line-through; color: #777777;}
 .justright {text-align: right;}
 .justcenter {text-align: center;}
 .center {margin-left: auto; margin-right: auto;}
+.card { background-color:#FFFFFF;
+        border: none;
+        padding: 0.3em;
+        margin-left:6em;
+        margin-right:6em;
+        opacity: 0.4;
+      }
+
+
 
 footer { font-size: 0.7em; margin-top: 2em;}
 

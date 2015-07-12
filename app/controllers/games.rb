@@ -33,7 +33,7 @@ post '/games/:game_id/guesses' do
   answer = params[:card_answer]
   input = params[:user_guess]
 
-  guess = Guess.new(card_id: card_id, game_id: game_id, correct: answer == input)
+  guess = Guess.new(card_id: card_id, game_id: game_id, correct: answer.downcase == input.downcase)
   #need validation for save
   guess.save
   redirect "/games/#{game_id}"
