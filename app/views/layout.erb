@@ -26,15 +26,15 @@
 </head>
 <body>
   <header>
-    <div id="login-toolbar">
+    <div id="login-toolbar"><div class ="navlink">
       <% if current_user %>
         <a href="/users/<%=session[:user_id]%>"> | H O M E | </a>
         <a href="/logout">| L O G O U T |</a>
       <% else %>
-        <a href="/login"> | L O G O U T | </a>
+        <a href="/login"> | L O G   I N | </a>
         <a href='/signup'> | S I G N  U P | </a>
       <% end %>
-    </div>
+    </div></div>
   </header>
 <div class="justcenter">
   <%= yield %>
