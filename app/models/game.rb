@@ -3,7 +3,7 @@ class Game < ActiveRecord::Base
   belongs_to :deck
   has_many :guesses
 
-
+  #ZM: SEE PR 
   def load_cards
     deck = Deck.find_by(id: self.deck_id)
     deck.cards - guessed_cards
