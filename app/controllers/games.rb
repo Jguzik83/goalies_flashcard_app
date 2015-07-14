@@ -4,6 +4,7 @@ get '/games' do
 end
 
 post '/games' do
+  #ZM: SEE PR
   userid = User.find_by(id: session[:user_id]).id
   deckid = Deck.find_by(id: params[:deck_id]).id
 
@@ -16,6 +17,7 @@ get '/games/:id' do
 
   game = Game.find_by(id: params[:id])
 
+  #ZM: SEE PR
   if game.game_over?
     @score = game.score
     erb :'games/score'
